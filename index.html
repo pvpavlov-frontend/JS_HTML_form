@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script defer src="./js/input.js"></script>
+  <title>HTML_form</title>
+</head>
+
+<body>
+  <main>
+    <form action="#">
+      <h2>
+        Contact form
+      </h2>
+      <p>
+        Please fill in you information and we'll be sending your order
+      </p>
+      <fieldset>
+        <label>
+          <span>Your name</span>
+          <div class="wrap-input item2">
+            <input id="firstName" type="text" name="first-name" placeholder="first name" minlength="2" maxlength="40"
+              autofocus required>
+            <input id="lastName" type="text" name="last-name" placeholder="last name" minlength="2" maxlength="40"
+              required>
+          </div>
+        </label>
+        <label>
+          <span>Your email</span>
+          <div class="wrap-input">
+            <input id="mail" type="email" name="email" placeholder="your_mail@mail.com"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+          </div>
+        </label>
+        <label>
+          <span>Phone *</span>
+          <div class="wrap-input item3">
+            <input type="tel" name="tel-number-1" placeholder="000" pattern="[0-9]{3}" required>
+            <input type="tel" name="tel-number-2" placeholder="000" pattern="[0-9]{3}" required>
+            <input type="tel" name="tel-number-3" placeholder="0000" pattern="[0-9]{4}" required>
+          </div>
+        </label>
+        <label>
+          <span>Message subject * </span>
+          <div class="wrap-input">
+            <select name="select">
+              <option value="value1" selected>Other</option>
+              <option value="value2">value 2</option>
+              <option value="value3">value 3</option>
+              <option value="value4">value 4</option>
+            </select>
+          </div>
+        </label>
+        <label>
+          <span>Message *</span>
+          <div class="wrap-input">
+            <textarea id="story" name="textarea" placeholder=""></textarea>
+          </div>
+        </label>
+      </fieldset>
+      <button type="submit" class="btn-submit">Submit form</button>
+    </form>
+  </main>
+</body>
+
+</html>
