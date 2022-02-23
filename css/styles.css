@@ -73,7 +73,7 @@ main {
   justify-content: flex-start;
   flex-direction: column;
 }
-form {
+.form-wrap {
   width: 100%;
   max-width: 845px;
   margin: 60px auto;
@@ -82,12 +82,12 @@ form {
   box-sizing: border-box;
   color: #fff;
 }
-form h2 {
+h2 {
   font-size: 25px;
   font-weight: bold;
   padding-bottom: 25px;
 }
-form p {
+p {
   font-size: 13px;
   padding-bottom: 35px;
 }
@@ -112,12 +112,16 @@ fieldset {
   padding-bottom: 10px;
   border-bottom: 1px solid #fff;
 }
-.wrap-input{
+.form-flex{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: calc(100% - 145px);
+  font-size: 12px;
+  color: red;
 }
+
+
 input,
 textarea,
 select {
@@ -125,6 +129,7 @@ select {
   font-size: 12px;
   width: 100%;
   border: 1px solid transparent;
+  box-sizing: border-box;
 }
 input:focus{
   outline: none;
@@ -133,13 +138,20 @@ input:focus{
 
 textarea {
   min-height: 75px;
+  outline: none;
+}
+.wrap-input {
+  width: calc(100% - 145px);
+  box-sizing: border-box;
+  font-size: 10px;
+  color: red;
 }
 
-.item2 input {
+.item2 .wrap-input {
   width: calc(1/2*100% - (1 - 1/2)*15px);
   box-sizing: border-box;
 }
-.item3 input {
+.item3 .wrap-input {
   width: calc(1/3*100% - (1 - 1/3)*15px);
   box-sizing: border-box;
 }
@@ -158,31 +170,29 @@ textarea {
   box-sizing: border-box;
   cursor: pointer;
 }
+select{
+  outline: none;
+}
 
 /*************************/
 /********* ERROR *********/
 /*************************/
 
 input[type=email]{
-  -webkit-appearance: none;
-  appearance: none;
-
   width: 100%;
-  border: 1px solid #333;
-  margin: 0;
-
-  font-family: inherit;
-  font-size: 90%;
-
   box-sizing: border-box;
 }
 
-input:required:valid {
+input.valid,
+select.valid,
+textarea.valid {
   border-color: green;
   background-color: #e8f0fe;
 }
 
-input:required:invalid{
+input.invalid,
+select.invalid,
+textarea.valid{
   border-color: #900;
   background-color: #FDD;
 }
@@ -194,22 +204,34 @@ input:required:focus:invalid {
   border-color: #900 !important;
 }
 
-.error.active {
-  padding: 0.3em;
-}
+/* html,
+body {
+  height: 100vh;
+} */
 
 @media screen and (max-width: 500px){
   label{
-    flex-direction: column
+    flex-direction: column;
+    margin-bottom: 0;
   }
   label span {
     flex: auto;
   }
+  .form-wrap {
+    padding: 40px 15px;
+  }
   .wrap-input {
     width: 100%;
+    margin-bottom: 15px;
   }
-  form {
-    padding: 25px 15px;
+  .form-flex {
+    width: 100%;
+  }
+  .item2 .wrap-input {
+    width: 100%;
+  }
+  .item3 .wrap-input {
+    width: 100%;
   }
   .btn-submit{
     width: 100%;

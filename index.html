@@ -12,58 +12,135 @@
 
 <body>
   <main>
-    <form action="#">
+    <div class="form-wrap">
       <h2>
         Contact form
       </h2>
       <p>
         Please fill in you information and we'll be sending your order
       </p>
-      <fieldset>
+      <!-- <form class='formWithValidation' action="#" action="#" method="post">
+        <fieldset>
+          <label>
+            <span>Your name</span>
+            <div class="form-flex item2">
+              <div class="wrap-input">
+                <input id="firstName" class='from field' type="text" name="first-name" placeholder="first name" minlength="2"
+                  maxlength="40" autofocus>
+              </div>
+              <div class="wrap-input">
+                <input id="lastName" type="text" name="last-name" placeholder="last name" minlength="2" maxlength="40">
+              </div>
+            </div>
+          </label>
+          <label>
+            <span>Your email</span>
+            <div class="wrap-input">
+              <input id="mail" type="email" name="email" placeholder="your_mail@mail.com">
+            </div>
+          </label>
+          <label>
+            <span>Phone *</span>
+            <div class="form-flex item3">
+              <div class="wrap-input">
+                <input type="tel" name="tel-number-1" placeholder="000">
+              </div>
+              <div class="wrap-input">
+                <input type="tel" name="tel-number-2" placeholder="000">
+              </div>
+              <div class="wrap-input">
+                <input type="tel" name="tel-number-3" placeholder="0000">
+              </div>
+            </div>
+          </label>
+          <label>
+            <span>Message subject * </span>
+            <div class="wrap-input">
+              <select name="select">
+                <option value="value1" selected>Other</option>
+                <option value="value2">value 2</option>
+                <option value="value3">value 3</option>
+                <option value="value4">value 4</option>
+              </select>
+            </div>
+          </label>
+          <label>
+            <span>Message *</span>
+            <div class="wrap-input">
+              <textarea id="story" name="textarea" placeholder=""></textarea>
+            </div>
+          </label>
+        </fieldset>
+        <button type="submit" class="btn-submit">Submit form</button>
+      </form> -->
+
+
+      <form class='formWithValidation'>
         <label>
           <span>Your name</span>
-          <div class="wrap-input item2">
-            <input id="firstName" type="text" name="first-name" placeholder="first name" minlength="2" maxlength="40"
-              autofocus required>
-            <input id="lastName" type="text" name="last-name" placeholder="last name" minlength="2" maxlength="40"
-              required>
+          <div class="form-flex item2">
+            <div class="wrap-input">
+              <input type='text' class='from field' placeholder="first name" minlength="2" maxlength="40" autofocus>
+            </div>
+            <div class="wrap-input">
+              <input type='text' class='from field' placeholder="last name" minlength="2" maxlength="40">
+            </div>
+          </div>
+        </label>
+
+
+        <label>
+          <span>Password:</span>
+          <div class="wrap-input">
+            <input type='password' name='pass' class='password field'>
           </div>
         </label>
         <label>
-          <span>Your email</span>
+          <span>Password confirmation:</span>
           <div class="wrap-input">
-            <input id="mail" type="email" name="email" placeholder="your_mail@mail.com"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <input type='password' name='pass' class='passwordConfirmation field'>
           </div>
         </label>
+
         <label>
           <span>Phone *</span>
-          <div class="wrap-input item3">
-            <input type="tel" name="tel-number-1" placeholder="000" pattern="[0-9]{3}" required>
-            <input type="tel" name="tel-number-2" placeholder="000" pattern="[0-9]{3}" required>
-            <input type="tel" name="tel-number-3" placeholder="0000" pattern="[0-9]{4}" required>
+          <div class="form-flex item3">
+            <div class="wrap-input">
+              <input type="tel" name="tel-number-1" placeholder="000">
+            </div>
+            <div class="wrap-input">
+              <input type="tel" name="tel-number-2" placeholder="000">
+            </div>
+            <div class="wrap-input">
+              <input type="tel" name="tel-number-3" placeholder="0000">
+            </div>
           </div>
         </label>
+
+
+
         <label>
           <span>Message subject * </span>
           <div class="wrap-input">
-            <select name="select">
-              <option value="value1" selected>Other</option>
+            <select class='where field' name="select">
+              <option selected>Other</option>
               <option value="value2">value 2</option>
               <option value="value3">value 3</option>
               <option value="value4">value 4</option>
             </select>
           </div>
         </label>
+
+
         <label>
           <span>Message *</span>
           <div class="wrap-input">
-            <textarea id="story" name="textarea" placeholder=""></textarea>
+            <textarea id="story" class='message field' name="textarea" placeholder=""></textarea>
           </div>
         </label>
-      </fieldset>
-      <button type="submit" class="btn-submit">Submit form</button>
-    </form>
+        <input type='submit' class='validateBtn btn-submit' value='Submit form' />
+      </form>
+    </div>
   </main>
 </body>
 
